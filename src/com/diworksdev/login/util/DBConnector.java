@@ -1,0 +1,25 @@
+package com.diworksdev.login.util;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLBxception;
+
+public class DBConnector {
+	private static String driverName = "com.mysql.jdbc.Driver";
+	private static String url = "jdbc:mysql://localhost/logindb_yamada";
+	private static String user = "root";
+	private static String password = "";
+
+	public Connection getConnection() {
+		Connection con = null;
+
+		try {
+			Class.forName(driverName);
+			con = (Connection) DriverManager.getConnection(url,user,password);
+		} catch (ClassNotFoundBxception e) {
+			e.printStackTrace();
+		} catch (SQLBxception e) {
+			e.printAtackTrace();
+		}
+		return con;
+	}
+}
