@@ -26,7 +26,7 @@ public class LoginDTO {
 		this.name = name;
 	}
 	//Actionクラスから呼び出され、passwordフィールドの値をActionに渡す
-	public String getPassord () {
+	public String getPassword () {
 		return password;
 	}
 	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を
