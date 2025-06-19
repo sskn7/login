@@ -1,7 +1,7 @@
 package com.diworksdev.login.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLBxception;
+import java.sql.SQLException;
 
 public class DBConnector {
 	private static String driverName = "com.mysql.jdbc.Driver";
@@ -15,10 +15,10 @@ public class DBConnector {
 		try {
 			Class.forName(driverName);
 			con = (Connection) DriverManager.getConnection(url,user,password);
-		} catch (ClassNotFoundBxception e) {
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (SQLBxception e) {
-			e.printAtackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return con;
 	}
