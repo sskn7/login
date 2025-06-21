@@ -13,7 +13,6 @@
    <s:password name="password"/>
    <s:submit value="ログイン"/>
 </s:form>
-//ユーザーが入力したユーザーネームとパスワードの値に
-//それぞれname,password	という名前をつけて送信する
+
 </body>
 </html>
